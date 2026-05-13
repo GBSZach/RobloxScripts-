@@ -55,7 +55,7 @@ blur.Parent = Lighting
 
 --// Main
 local main = Instance.new("Frame")
-main.Size = UDim2.fromScale(0.68, 0.5)
+main.Size = UDim2.fromScale(0.68, 0.68)
 main.Position = UDim2.fromScale(0.5, 0.5)
 main.AnchorPoint = Vector2.new(0.5,0.5)
 main.BackgroundColor3 = Color3.fromRGB(20,20,20)
@@ -180,7 +180,7 @@ scroll.BackgroundTransparency = 1
 scroll.Parent = main
 
 local list = Instance.new("UIListLayout")
-list.Padding = UDim.new(0,6)
+list.Padding = UDim.new(0,4)
 list.Parent = scroll
 
 --// Notification
@@ -238,7 +238,7 @@ end
 --// Script Card
 local function createScriptCard(data)
     local card = Instance.new("Frame")
-    card.Size = UDim2.new(1,0,0,70)
+    card.Size = UDim2.new(1,0,0,54)
     card.BackgroundColor3 = Color3.fromRGB(28,28,28)
     card.Parent = scroll
     Instance.new("UICorner", card).CornerRadius = UDim.new(0,8)
@@ -256,7 +256,7 @@ local function createScriptCard(data)
 
     local category = Instance.new("TextLabel")
     category.Size = UDim2.new(1,-90,0,18)
-    category.Position = UDim2.new(0,10,0,32)
+    category.Position = UDim2.new(0,10,0,26)
     category.BackgroundTransparency = 1
     category.Text = data.category
     category.TextColor3 = Color3.fromRGB(170,170,170)
@@ -266,8 +266,8 @@ local function createScriptCard(data)
     category.Parent = card
 
     local run = Instance.new("TextButton")
-    run.Size = UDim2.new(0,70,0,32)
-    run.Position = UDim2.new(1,-80,0.5,-16)
+    run.Size = UDim2.new(0,60,0,26)
+    run.Position = UDim2.new(1,-70,0.5,-13)
     run.BackgroundColor3 = Color3.fromRGB(60,120,255)
     run.Text = "RUN"
     run.TextColor3 = Color3.new(1,1,1)
