@@ -17,8 +17,10 @@ local D={
  recent={},
  scripts={
   {title="Infinite Yield",category="Tools",description="Universal admin command script.",source="https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source"},
-  {title="SimpleSpy",category="Tools",description="Remote event inspection utility.",source="https://raw.githubusercontent.com/exxtremestuffs/SimpleSpySource/master/SimpleSpy.lua"},
+  {title="Cobalt",category="Tools",description="Remote event inspection utility.",source="https://github.com/notpoiu/cobalt/releases/latest/download/Cobalt.luau"},
   {title="YARHM",category="Universal",description="Universal utility script.",source="https://rawscripts.net/raw/Universal-Script-YARHM-12403"},
+  {title="Deo",category="Universal",description="Demonlogy universal script.",source="https://file.garden/ahkRbB3bekZ7SJ00/LOADER"},
+  {title="Universal Emotes",category="Universal",description="Universal emote hub by 7yd7.",source="https://raw.githubusercontent.com/7yd7/Hub/refs/heads/Branch/GUIS/Emotes.lua"},
   {title="Distance Checker",category="Universal",description="Checks the live distance between two players.",source="https://raw.githubusercontent.com/GBSZach/RobloxScripts-/refs/heads/main/DistanceChecker.lua"},
   {title="GBS Aimlocker",category="Universal",description="Universal aimlocker utility.",source="https://raw.githubusercontent.com/GBSZach/RobloxScripts-/refs/heads/main/GBSAIMLOCKER.lua"},
   {title="Held Tool Paster",category="Universal",description="Copies the tool you're holding and allows repeated pasting.",source="https://raw.githubusercontent.com/GBSZach/RobloxScripts-/refs/heads/main/heldtoolpaster.lua"},
@@ -574,12 +576,14 @@ local function minimize()
 
  mini.MouseButton1Click:Connect(function()
   M.Visible=true
+  B.Enabled=true
   if mini then mini:Destroy() mini=nil end
  end)
 end
 
 minBtn.MouseButton1Click:Connect(function()
  M.Visible=false
+ B.Enabled=false
  minimize()
 end)
 
